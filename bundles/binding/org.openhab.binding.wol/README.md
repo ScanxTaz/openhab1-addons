@@ -18,7 +18,12 @@ The syntax for the Wake-on-LAN binding configuration string is explained here:
 wol="<broadcast-IP>#<macaddress>"
 ```
 
-NOTE: The `<broadcast-IP>` address is not the one from the machine you want to wake up - this is identified by MAC address. IP is the broadcast IP from the SubNet; Here some examples for a typical C class network: - 192.168.1.255 for the destination IP 192.168.1.10 - or 127.0.0.255 for 127.0.0.15. 
+NOTE: The `<broadcast-IP>` address is the address of the subnet (usually --and depending your need-- take your IP,remove the digit after the last point and replace by 255. 
+E.g : If your IP is 192.168.0.12, your subnet mask would certainly be 192.168.0.255). This is NOT the IP of the machine you want to wake up.
+
+`<macaddress`> is the mac adress of the machine's network card you want to wakeup.
+
+Here some examples for a typical C class network: - 192.168.1.255 for the destination IP 192.168.1.10 - or 127.0.0.255 for 127.0.0.15. 
 
 Here are some examples of valid binding configuration strings:
 
